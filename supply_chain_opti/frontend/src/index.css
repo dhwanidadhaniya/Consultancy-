@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background-color: #070A12;
+  color: #F1F5F9;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  @apply bg-cyber-dark text-cyber-text antialiased selection:bg-neon-cyan/25 selection:text-neon-cyan;
+}
+
+/* Glassmorphism Cards - Watermelon UI Style */
+.glass-card {
+  background: rgba(14, 22, 38, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  border-radius: 1rem;
+}
+
+.glass-panel {
+  background: rgba(20, 31, 54, 0.5);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 0.85rem;
+}
+
+.section-label {
+  @apply font-mono text-[10.5px] tracking-[0.18em] uppercase text-cyber-faint font-semibold;
+}
+
+/* Glowing text and borders */
+.text-glow-cyan {
+  text-shadow: 0 0 12px rgba(0, 242, 254, 0.6);
+}
+
+.text-glow-emerald {
+  text-shadow: 0 0 12px rgba(16, 185, 129, 0.6);
+}
+
+.text-glow-rose {
+  text-shadow: 0 0 12px rgba(244, 63, 94, 0.6);
+}
+
+.border-glow-cyan {
+  border-color: rgba(0, 242, 254, 0.4);
+  box-shadow: 0 0 15px -3px rgba(0, 242, 254, 0.25);
+}
+
+/* Futuristic Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.25);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 242, 254, 0.5);
+}
+::-webkit-scrollbar-track {
+  background: rgba(7, 11, 20, 0.8);
+}
+
+/* Recharts Custom Tooltip Glass Dark Override */
+.recharts-default-tooltip {
+  background-color: rgba(14, 22, 38, 0.9) !important;
+  border: 1px solid rgba(0, 242, 254, 0.3) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.7), 0 0 15px rgba(0, 242, 254, 0.15) !important;
+  color: #F1F5F9 !important;
+  backdrop-filter: blur(12px) !important;
+  padding: 10px 14px !important;
+}
+
+.recharts-tooltip-item-name,
+.recharts-tooltip-item-value {
+  color: #F1F5F9 !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 12px !important;
+}
+
+/* ReactFlow Dark Cyber Styling */
+.react-flow__background {
+  background-color: transparent !important;
+}
+.react-flow__controls {
+  background: rgba(14, 22, 38, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+}
+.react-flow__controls-button {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #94A3B8 !important;
+  fill: #94A3B8 !important;
+}
+.react-flow__controls-button:hover {
+  background: rgba(0, 242, 254, 0.15) !important;
+  color: #00F2FE !important;
+  fill: #00F2FE !important;
+}
