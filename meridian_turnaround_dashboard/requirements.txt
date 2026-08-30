@@ -1,0 +1,50 @@
+# Requirements
+
+This is a Node.js / React project — there is no Python code, so there are no
+pip packages to install. This file documents the runtime prerequisites and
+every package the project depends on, for reference or for environments that
+expect a `requirements.txt`-style manifest.
+
+## Runtime prerequisites
+
+- Node.js >= 18.x (tested on Node 22)
+- npm >= 9.x (tested on npm 10)
+- A modern browser (Chrome, Firefox, Edge, Safari) to view the dashboard
+- No database required — all data is served from JS modules in backend/data/
+- No API keys, tokens, or external services required
+
+## Installing dependencies
+
+Dependencies are installed via npm, not pip:
+
+    npm run install:all
+
+which is equivalent to running `npm install` inside both `backend/` and
+`frontend/`. The exact package list for each is below (also see
+backend/package.json and frontend/package.json / package-lock.json for
+pinned versions).
+
+## Backend (backend/package.json)
+
+Dependencies:
+- express ^4.19.2       — HTTP server and routing
+- cors ^2.8.5           — Cross-origin requests from the Vite dev server
+
+## Frontend (frontend/package.json)
+
+Dependencies:
+- react ^19.2.8
+- react-dom ^19.2.8
+- react-router-dom ^7.18.2   — client-side routing between the 7 pages
+- recharts ^3.10.1           — charts (line, bar, composed, pie)
+
+Dev dependencies:
+- vite ^8.2.2                — dev server & production build
+- @vitejs/plugin-react ^6.1.0
+- oxlint ^1.79.0              — linting
+- @types/react ^19.2.18, @types/react-dom ^19.2.4 — editor type hints only
+
+## Root (package.json)
+
+Dev dependencies:
+- concurrently ^9.0.0   — runs backend and frontend together with `npm run dev`
